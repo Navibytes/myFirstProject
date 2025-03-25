@@ -10,5 +10,6 @@ public class App {
         }
 
         reader.close();
+        System.out.println("new commit");
     }
 }
