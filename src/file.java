@@ -6,4 +6,5 @@ public class file {
     String createdAt;
     String updatedAt;
     String testPush;
+    String testAgain;
 }
