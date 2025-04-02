@@ -5,4 +5,5 @@ public class file {
     String status;
     String createdAt;
     String updatedAt;
+    String testPush;
 }
