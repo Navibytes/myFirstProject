@@ -28,11 +28,7 @@ public class App {
                 ++ID;
             }
             if (program.startsWith("update ")){
-                program = program.replaceAll("\\s", "");
-                System.out.println(program);
-                program = program.substring(program.indexOf("e")+1, program.length());
-                System.out.println(program);
-                int inputID = Integer.parseInt(program);
+                int inputID = inputIdentify(program);
                 System.out.println("you are editing task"+ inputID);
                 LocalDateTime clock = LocalDateTime.now();
                 taskList.get(inputID).update(clock);
@@ -41,5 +37,12 @@ public class App {
 
         reader.close();
         System.out.println("end of program");
+    }
+    public static int inputIdentify(String input){
+        input = input.replaceAll("\\s", "");
+        System.out.println(input);
+        input = input.substring(input.indexOf("e")+1, input.length());
+        System.out.println(input);
+        return Integer.parseInt(input);    
     }
 }
