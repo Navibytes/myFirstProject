@@ -15,9 +15,17 @@ public class task {
         this.createdAt = createdAt;
     }
 
-    public void update(LocalDateTime updatedAtVar){
+    public void updateTime(LocalDateTime updatedAtVar){
         updatedAt = updatedAtVar;
         System.out.println("New time is: "+ updatedAt);
+    }
+
+    public void updateDesc(String desc){
+        description = desc;
+    }
+
+    public void list(){
+        System.out.println(id+"\n"+description+"\n"+status+"\n"+createdAt+"\n"+updatedAt);
     }
 
     public void mark(boolean done){
@@ -27,5 +35,14 @@ public class task {
         else{
             status = "in progress";
         }
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    @Override
+    public String toString(){
+        return "ID: "+ id + "\n" + "Description:" + description + "\n" + "Status: " + status + "\n"+ "Created at: " + createdAt + "\n" + "Updated at: " + updatedAt + "\n";
     }
 }
