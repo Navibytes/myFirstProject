@@ -22,7 +22,7 @@ public class App {
                 tasky.update(program);
             }
 
-            if (program.startsWith("list")){
+            if (program.equals("list")){
                 tasky.list(program);
             }
             

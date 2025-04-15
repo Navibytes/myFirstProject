@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 public class task {
     int id;
     String description="";
-    String status = "haven't started";
+    String status = "todo";
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 
@@ -33,7 +33,7 @@ public class task {
             status = "done";
         }
         else{
-            status = "in progress";
+            status = "in-progress";
         }
     }
 

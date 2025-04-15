@@ -46,7 +46,11 @@ public class TaskManager {
 
     public void listBy(String input){
         String type = returnDesc(input);
-        for (int i = 0; i < taskList.size(); )
+        for (int i = 0; i < taskList.size(); i++){
+            if(taskList.get(i).getStatus().equals(type)){
+                System.out.println(taskList.get(i));
+            }
+        }
     }
 
     public static String returnDesc(String input){
